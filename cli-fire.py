@@ -1,4 +1,4 @@
-#!/home/felipe-zorzo/.venv/bin/python
+#!/usr/bin/env python3
 
 import fire
 from mylib import logic
