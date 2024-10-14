@@ -6,9 +6,10 @@ COPY . main.py /app/
 
 WORKDIR /app
 
-RUN python -m nltk.downloader punkt punkt_tab
-RUN python -m textblob.download_corpora
+RUN pip install --no-cache-dir nltk && \
+    python -m nltk.downloader punkt punkt_tab
 RUN pip install -r requirements.txt
+RUN python -m textblob.download_corpora
 
 EXPOSE 8000
 
