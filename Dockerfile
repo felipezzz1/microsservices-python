@@ -9,7 +9,7 @@ WORKDIR /app
 RUN pip install --no-cache-dir nltk && \
     python -m nltk.downloader punkt punkt_tab
 RUN pip install -r requirements.txt
-RUN pip install httpx
+RUN pip install --no-cache-dir httpx
 RUN python -m textblob.download_corpora
 
 EXPOSE 8000
