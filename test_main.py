@@ -6,7 +6,6 @@ client = TestClient(app)
 
 
 def test_read_main():
-    nltk.download('punkt')
     response = client.get("/")
     assert response.status_code == 200
     assert response.json() == {
@@ -44,6 +43,7 @@ def test_read_wiki():
 
 
 def test_read_phrase():
+    nltk.download('punkt_tab')
     response = client.get("/phrase/Brazil")
     assert response.status_code == 200
     assert response.json() == {
