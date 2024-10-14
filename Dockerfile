@@ -6,8 +6,7 @@ COPY . main.py /app/
 
 WORKDIR /app
 
-RUN pip install --no-cache-dir nltk && \
-    python -m nltk.downloader punkt punkt_tab
+RUN pip install --no-cache-dir nltk
 RUN pip install -r requirements.txt
 
 EXPOSE 8000
