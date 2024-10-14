@@ -13,7 +13,6 @@ jobs:
       run: |
         make install
         python -m textblob.download_corpora
-        python -m nltk.downloader punkt punkt_tab
     - name: Lint with pylint
       run: |
         make lint
